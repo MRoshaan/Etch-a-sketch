@@ -1,0 +1,169 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Set the main container for centering */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Main content */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    flex: 1;
+    padding: 1rem;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.resetGrid {
+    color: white;
+    background-color: rgb(135, 222, 171);
+    cursor: pointer;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.resetGrid:hover {
+    color: white;
+    background-color: red;
+}
+
+input[type="range"] {
+    width: 200px;
+    margin-bottom: 0.5rem;
+}
+
+label {
+    font-size: 0.9rem;
+}
+
+/* Grid container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    max-height: 640px;
+    background-color: #ddd;
+    border: 2px solid #bbb;
+    margin: auto; /* Center horizontally and vertically */
+}
+
+/* Grid items */
+.square {
+    flex: 0 0 calc(100% / 16); /* Default for 16x16 grid */
+    height: calc(100% / 16);
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    transition: background-color 0.3s ease;
+}
+
+.square:hover {
+    background-color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    .resetGrid {
+        font-size: 0.8rem;
+    }
+
+    input[type="range"] {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+
+    .container {
+        max-width: 100%;
+        max-height: 500px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    .resetGrid {
+        padding: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    input[type="range"] {
+        max-width: 100px;
+    }
+
+    label {
+        font-size: 0.7rem;
+    }
+
+    .container {
+        max-height: 400px; /* Further adjust height for very small screens */
+    }
+}
